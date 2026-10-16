@@ -1,0 +1,45 @@
+DRUG RECOMMENDATION SYSTEM - DATA VALIDATION REPORT
+
+====================================================
+
+
+--- DATASET: Diseases_and_Symptoms ---
+File Path: C:\Users\AYAN MANDAL\OneDrive\文档\DRUG RECOMMENDATION ANTIGRAVITY\data\Diseases_and_Symptoms_dataset.csv
+Total Rows: 20
+Detected Columns: ['Disease', 'Symptoms', 'Description']
+Missing Values per Column:
+Disease        0
+Symptoms       0
+Description    0
+Duplicate Rows Count: 0
+Status: Successfully validated, cleaned, and saved.
+
+--- DATASET: Medications ---
+File Path: C:\Users\AYAN MANDAL\OneDrive\文档\DRUG RECOMMENDATION ANTIGRAVITY\data\medications.csv
+Total Rows: 21
+Detected Columns: ['Disease', 'Medicine_Name', 'Generic_Name', 'Category', 'Common_Use', 'Precautions', 'Side_Effects', 'Contraindications', 'Warning']
+Missing Values per Column:
+Disease              0
+Medicine_Name        0
+Generic_Name         0
+Category             0
+Common_Use           0
+Precautions          0
+Side_Effects         0
+Contraindications    0
+Warning              0
+Duplicate Rows Count: 0
+Status: Successfully validated, cleaned, and saved.
+
+--- DATASET: Precautions ---
+File Path: C:\Users\AYAN MANDAL\OneDrive\文档\DRUG RECOMMENDATION ANTIGRAVITY\data\precautions.csv
+Total Rows: 20
+Detected Columns: ['Disease', 'Precaution_1', 'Precaution_2', 'Precaution_3', 'Precaution_4']
+Missing Values per Column:
+Disease         0
+Precaution_1    0
+Precaution_2    0
+Precaution_3    0
+Precaution_4    0
+Duplicate Rows Count: 0
+Status: Successfully validated, cleaned, and saved.

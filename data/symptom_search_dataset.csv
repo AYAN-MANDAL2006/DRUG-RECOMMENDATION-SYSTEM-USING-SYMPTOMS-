@@ -1,0 +1,157 @@
+﻿symptom_id,symptom_name,category,synonyms,search_terms,data_note
+S001,Fever,General,high temperature; pyrexia,fever; high temperature; pyrexia,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S002,Chills,General,shivering; feeling cold,chills; shivering; feeling cold,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S003,Fatigue,General,tiredness; exhaustion; low energy,fatigue; tiredness; exhaustion; low energy,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S004,Weakness,General,feeling weak; lack of strength,weakness; feeling weak; lack of strength,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S005,Dizziness,General,lightheadedness; feeling dizzy,dizziness; lightheadedness; feeling dizzy,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S006,Vertigo,General,spinning sensation; room spinning,vertigo; spinning sensation; room spinning,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S007,Fainting,General,passing out; syncope,fainting; passing out; syncope,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S008,Loss of appetite,General,reduced appetite; not hungry,loss of appetite; reduced appetite; not hungry,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S009,Excessive thirst,General,increased thirst; always thirsty,excessive thirst; increased thirst; always thirsty,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S010,Excessive sweating,General,heavy sweating; night sweats,excessive sweating; heavy sweating; night sweats,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S011,Unintentional weight loss,General,losing weight; unexpected weight loss,unintentional weight loss; losing weight; unexpected weight loss,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S012,Unusual weight gain,General,gaining weight; unexpected weight gain,unusual weight gain; gaining weight; unexpected weight gain,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S013,Headache,Head and senses,head pain; pain in head,headache; head pain; pain in head,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S014,Migraine,Head and senses,severe headache; one-sided headache,migraine; severe headache; one-sided headache,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S015,Blurred vision,Head and senses,blurry eyesight; unclear vision,blurred vision; blurry eyesight; unclear vision,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S016,Double vision,Head and senses,seeing double; diplopia,double vision; seeing double; diplopia,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S017,Eye pain,Head and senses,pain in eye; sore eye,eye pain; pain in eye; sore eye,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S018,Red eyes,Head and senses,bloodshot eyes; eye redness,red eyes; bloodshot eyes; eye redness,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S019,Dry eyes,Head and senses,gritty eyes; eye dryness,dry eyes; gritty eyes; eye dryness,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S020,Watery eyes,Head and senses,tearing; excessive tears,watery eyes; tearing; excessive tears,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S021,Sensitivity to light,Head and senses,light sensitivity; photophobia,sensitivity to light; light sensitivity; photophobia,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S022,Earache,Head and senses,ear pain; pain in ear,earache; ear pain; pain in ear,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S023,Ringing in ears,Head and senses,tinnitus; buzzing in ears,ringing in ears; tinnitus; buzzing in ears,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S024,Hearing loss,Head and senses,reduced hearing; difficulty hearing,hearing loss; reduced hearing; difficulty hearing,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S025,Blocked nose,Head and senses,nasal congestion; stuffy nose,blocked nose; nasal congestion; stuffy nose,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S026,Runny nose,Head and senses,nasal discharge; dripping nose,runny nose; nasal discharge; dripping nose,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S027,Sneezing,Head and senses,repeated sneezing,sneezing; repeated sneezing,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S028,Loss of smell,Head and senses,reduced smell; anosmia,loss of smell; reduced smell; anosmia,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S029,Loss of taste,Head and senses,reduced taste; ageusia,loss of taste; reduced taste; ageusia,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S030,Sore throat,Head and senses,throat pain; painful throat,sore throat; throat pain; painful throat,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S031,Hoarse voice,Head and senses,hoarseness; raspy voice,hoarse voice; hoarseness; raspy voice,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S032,Difficulty swallowing,Head and senses,trouble swallowing; dysphagia,difficulty swallowing; trouble swallowing; dysphagia,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S033,Mouth ulcers,Head and senses,oral sores; canker sores,mouth ulcers; oral sores; canker sores,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S034,Dry mouth,Head and senses,mouth dryness,dry mouth; mouth dryness,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S035,Toothache,Head and senses,tooth pain; dental pain,toothache; tooth pain; dental pain,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S036,Cough,Respiratory,coughing,cough; coughing,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S037,Dry cough,Respiratory,nonproductive cough; cough without mucus,dry cough; nonproductive cough; cough without mucus,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S038,Wet cough,Respiratory,productive cough; cough with phlegm,wet cough; productive cough; cough with phlegm,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S039,Shortness of breath,Respiratory,breathlessness; difficulty breathing; dyspnea,shortness of breath; breathlessness; difficulty breathing; dyspnea,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S040,Wheezing,Respiratory,whistling breath; noisy breathing,wheezing; whistling breath; noisy breathing,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S041,Chest tightness,Respiratory,tight chest; pressure in chest,chest tightness; tight chest; pressure in chest,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S042,Phlegm,Respiratory,sputum; mucus when coughing,phlegm; sputum; mucus when coughing,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S043,Coughing blood,Respiratory,blood in sputum; hemoptysis,coughing blood; blood in sputum; hemoptysis,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S044,Rapid breathing,Respiratory,fast breathing; tachypnea,rapid breathing; fast breathing; tachypnea,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S045,Chest pain,Cardiovascular,pain in chest; chest discomfort,chest pain; pain in chest; chest discomfort,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S046,Palpitations,Cardiovascular,racing heart; pounding heartbeat,palpitations; racing heart; pounding heartbeat,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S047,Rapid heartbeat,Cardiovascular,fast heart rate; tachycardia,rapid heartbeat; fast heart rate; tachycardia,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S048,Slow heartbeat,Cardiovascular,low heart rate; bradycardia,slow heartbeat; low heart rate; bradycardia,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S049,Swollen ankles,Cardiovascular,ankle swelling; edema,swollen ankles; ankle swelling; edema,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S050,Cold hands and feet,Cardiovascular,cold extremities,cold hands and feet; cold extremities,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S051,Nausea,Digestive,feeling sick; queasiness,nausea; feeling sick; queasiness,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S052,Vomiting,Digestive,throwing up; emesis,vomiting; throwing up; emesis,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S053,Diarrhea,Digestive,loose stools; watery stools,diarrhea; loose stools; watery stools,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S054,Constipation,Digestive,difficulty passing stool; hard stools,constipation; difficulty passing stool; hard stools,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S055,Abdominal pain,Digestive,stomach pain; belly pain,abdominal pain; stomach pain; belly pain,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S056,Upper abdominal pain,Digestive,upper stomach pain; epigastric pain,upper abdominal pain; upper stomach pain; epigastric pain,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S057,Lower abdominal pain,Digestive,lower belly pain,lower abdominal pain; lower belly pain,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S058,Bloating,Digestive,abdominal fullness; swollen stomach,bloating; abdominal fullness; swollen stomach,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S059,Gas,Digestive,flatulence; passing wind,gas; flatulence; passing wind,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S060,Heartburn,Digestive,acid reflux; burning chest after meals,heartburn; acid reflux; burning chest after meals,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S061,Indigestion,Digestive,upset stomach; dyspepsia,indigestion; upset stomach; dyspepsia,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S062,Blood in stool,Digestive,rectal bleeding; bloody stool,blood in stool; rectal bleeding; bloody stool,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S063,Black stool,Digestive,tarry stool; melena,black stool; tarry stool; melena,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S064,Mucus in stool,Digestive,mucus in bowel movement,mucus in stool; mucus in bowel movement,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S065,Jaundice,Digestive,yellow skin; yellow eyes,jaundice; yellow skin; yellow eyes,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S066,Painful urination,Urinary,burning urination; dysuria,painful urination; burning urination; dysuria,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S067,Frequent urination,Urinary,urinating often; urinary frequency,frequent urination; urinating often; urinary frequency,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S068,Urgent urination,Urinary,sudden urge to urinate,urgent urination; sudden urge to urinate,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S069,Blood in urine,Urinary,bloody urine; hematuria,blood in urine; bloody urine; hematuria,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S070,Cloudy urine,Urinary,murky urine,cloudy urine; murky urine,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S071,Dark urine,Urinary,brown urine,dark urine; brown urine,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S072,Reduced urine output,Urinary,passing less urine; oliguria,reduced urine output; passing less urine; oliguria,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S073,Urinary leakage,Urinary,urine leakage; incontinence,urinary leakage; urine leakage; incontinence,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S074,Difficulty starting urination,Urinary,hesitancy; trouble beginning urine flow,difficulty starting urination; hesitancy; trouble beginning urine flow,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S075,Flank pain,Urinary,side pain; pain near kidneys,flank pain; side pain; pain near kidneys,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S076,Pelvic pain,Reproductive,pain in pelvis; pelvic discomfort,pelvic pain; pain in pelvis; pelvic discomfort,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S077,Painful menstruation,Reproductive,period pain; dysmenorrhea,painful menstruation; period pain; dysmenorrhea,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S078,Heavy menstrual bleeding,Reproductive,heavy periods; menorrhagia,heavy menstrual bleeding; heavy periods; menorrhagia,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S079,Irregular menstruation,Reproductive,irregular periods,irregular menstruation; irregular periods,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S080,Missed period,Reproductive,absent period; amenorrhea,missed period; absent period; amenorrhea,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S081,Unusual vaginal discharge,Reproductive,vaginal discharge; unusual fluid,unusual vaginal discharge; vaginal discharge; unusual fluid,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S082,Vaginal itching,Reproductive,itching in vaginal area,vaginal itching; itching in vaginal area,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S083,Pain during intercourse,Reproductive,painful sex; dyspareunia,pain during intercourse; painful sex; dyspareunia,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S084,Testicular pain,Reproductive,pain in testicle,testicular pain; pain in testicle,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S085,Testicular swelling,Reproductive,swollen testicle,testicular swelling; swollen testicle,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S086,Back pain,Musculoskeletal,backache; pain in back,back pain; backache; pain in back,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S087,Neck pain,Musculoskeletal,sore neck; cervical pain,neck pain; sore neck; cervical pain,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S088,Joint pain,Musculoskeletal,arthralgia; painful joints,joint pain; arthralgia; painful joints,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S089,Joint stiffness,Musculoskeletal,stiff joints; reduced joint movement,joint stiffness; stiff joints; reduced joint movement,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S090,Muscle pain,Musculoskeletal,myalgia; sore muscles,muscle pain; myalgia; sore muscles,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S091,Muscle cramps,Musculoskeletal,muscle spasms; sudden muscle tightening,muscle cramps; muscle spasms; sudden muscle tightening,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S092,Shoulder pain,Musculoskeletal,pain in shoulder,shoulder pain; pain in shoulder,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S093,Knee pain,Musculoskeletal,pain in knee,knee pain; pain in knee,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S094,Hip pain,Musculoskeletal,pain in hip,hip pain; pain in hip,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S095,Wrist pain,Musculoskeletal,pain in wrist,wrist pain; pain in wrist,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S096,Ankle pain,Musculoskeletal,pain in ankle,ankle pain; pain in ankle,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S097,Foot pain,Musculoskeletal,pain in foot,foot pain; pain in foot,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S098,Heel pain,Musculoskeletal,pain in heel,heel pain; pain in heel,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S099,Limping,Musculoskeletal,walking with a limp,limping; walking with a limp,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S100,Rash,Skin,skin eruption; skin spots,rash; skin eruption; skin spots,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S101,Itching,Skin,itchy skin; pruritus,itching; itchy skin; pruritus,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S102,Hives,Skin,urticaria; raised itchy welts,hives; urticaria; raised itchy welts,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S103,Dry skin,Skin,skin dryness; flaky skin,dry skin; skin dryness; flaky skin,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S104,Skin redness,Skin,red skin; erythema,skin redness; red skin; erythema,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S105,Skin peeling,Skin,peeling skin; desquamation,skin peeling; peeling skin; desquamation,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S106,Blisters,Skin,fluid-filled skin bumps,blisters; fluid-filled skin bumps,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S107,Easy bruising,Skin,bruising easily,easy bruising; bruising easily,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S108,Hair loss,Skin,hair thinning; alopecia,hair loss; hair thinning; alopecia,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S109,Brittle nails,Skin,fragile nails,brittle nails; fragile nails,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S110,Lump under skin,Skin,skin lump; subcutaneous lump,lump under skin; skin lump; subcutaneous lump,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S111,Changing mole,Skin,mole changing size or color,changing mole; mole changing size or color,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S112,Numbness,Neurological,loss of sensation; numb feeling,numbness; loss of sensation; numb feeling,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S113,Tingling,Neurological,pins and needles; paresthesia,tingling; pins and needles; paresthesia,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S114,Tremor,Neurological,shaking; trembling,tremor; shaking; trembling,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S115,Seizure,Neurological,convulsion; fit,seizure; convulsion; fit,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S116,Memory problems,Neurological,forgetfulness; memory loss,memory problems; forgetfulness; memory loss,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S117,Confusion,Neurological,disorientation; confused thinking,confusion; disorientation; confused thinking,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S118,Difficulty concentrating,Neurological,poor concentration; trouble focusing,difficulty concentrating; poor concentration; trouble focusing,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S119,Speech difficulty,Neurological,trouble speaking; slurred speech,speech difficulty; trouble speaking; slurred speech,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S120,Balance problems,Neurological,unsteadiness; poor balance,balance problems; unsteadiness; poor balance,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S121,Facial drooping,Neurological,drooping face; facial weakness,facial drooping; drooping face; facial weakness,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S122,Anxiety,Mental and emotional,nervousness; excessive worry,anxiety; nervousness; excessive worry,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S123,Low mood,Mental and emotional,sadness; depressed mood,low mood; sadness; depressed mood,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S124,Irritability,Mental and emotional,being unusually irritable,irritability; being unusually irritable,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S125,Sleep difficulty,General,insomnia; trouble sleeping,sleep difficulty; insomnia; trouble sleeping,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S126,Daytime sleepiness,General,drowsiness; excessive sleepiness,daytime sleepiness; drowsiness; excessive sleepiness,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S127,Swollen lymph nodes,General,enlarged glands; swollen glands,swollen lymph nodes; enlarged glands; swollen glands,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S128,Cold intolerance,General,feeling unusually cold,cold intolerance; feeling unusually cold,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S129,Heat intolerance,General,feeling unusually hot,heat intolerance; feeling unusually hot,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S130,Slow wound healing,Skin,wounds taking long to heal,slow wound healing; wounds taking long to heal,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S131,Bad breath,Head and senses,halitosis,bad breath; halitosis,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S132,Excessive hunger,General,increased appetite; polyphagia,excessive hunger; increased appetite; polyphagia,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S133,Excessive urination,Urinary,large urine volume; polyuria,excessive urination; large urine volume; polyuria,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S134,Facial swelling,Skin,swollen face,facial swelling; swollen face,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S135,Swollen hands,Musculoskeletal,hand swelling,swollen hands; hand swelling,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S136,Swollen feet,Musculoskeletal,foot swelling,swollen feet; foot swelling,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S137,Bone pain,Musculoskeletal,pain in bones,bone pain; pain in bones,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S138,Limited joint movement,Musculoskeletal,difficulty moving a joint; reduced range of motion,limited joint movement; difficulty moving a joint; reduced range of motion,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S139,Painful breathing,Respiratory,pain when breathing,painful breathing; pain when breathing,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S140,Snoring,Respiratory,loud breathing during sleep,snoring; loud breathing during sleep,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S141,Early fullness after eating,Digestive,feeling full quickly; early satiety,early fullness after eating; feeling full quickly; early satiety,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S142,Rectal pain,Digestive,pain around anus; anal pain,rectal pain; pain around anus; anal pain,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S143,Anal itching,Digestive,itchy anus,anal itching; itchy anus,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S144,Excessive hair growth,Skin,unwanted hair growth; hirsutism,excessive hair growth; unwanted hair growth; hirsutism,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S145,Nail discoloration,Skin,changed nail color,nail discoloration; changed nail color,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S146,Pale skin,Cardiovascular,pallor; looking pale,pale skin; pallor; looking pale,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S147,Bluish lips,Cardiovascular,blue lips; cyanosis,bluish lips; blue lips; cyanosis,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S148,Frequent infections,General,repeated infections,frequent infections; repeated infections,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S149,General body aches,General,body aches; generalized aches,general body aches; body aches; generalized aches,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S150,Restlessness,Mental and emotional,unable to relax; agitation,restlessness; unable to relax; agitation,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S151,Panic episodes,Mental and emotional,panic attacks; sudden intense fear,panic episodes; panic attacks; sudden intense fear,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S152,Hallucinations,Neurological,seeing or hearing things that are not there,hallucinations; seeing or hearing things that are not there,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S153,Reduced sense of touch,Neurological,decreased touch sensation,reduced sense of touch; decreased touch sensation,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S154,Loss of bowel control,Digestive,fecal incontinence; bowel leakage,loss of bowel control; fecal incontinence; bowel leakage,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S155,Difficulty passing gas,Digestive,unable to pass gas,difficulty passing gas; unable to pass gas,Symptom search vocabulary only; not a diagnosis or treatment recommendation.
+S156,Unusual body odor,General,changed body odor,unusual body odor; changed body odor,Symptom search vocabulary only; not a diagnosis or treatment recommendation.

@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+
+{% block title %}Symptom Analyzer - Drug Recommendation System{% endblock %}
+
+{% block content %}
+<div class="card" style="max-width: 900px; margin: 1rem auto;">
+    <h2 class="card-title">Symptom Analyzer & Search</h2>
+    <p style="color: var(--text-muted); margin-bottom: 1.5rem;">
+        Search for your symptoms or alternative terms (e.g., <em>"head"</em>, <em>"high temperature"</em>, <em>"cough"</em>), 
+        select multiple matching symptoms, or describe them in plain natural language for educational analysis.
+    </p>
+
+    <!-- SAFETY NOTICE NEAR INPUT -->
+    <div class="disclaimer-banner">
+        ⚠️ <strong>Notice:</strong> This tool provides educational information only based on verified OTC drug data. Do not use for emergency symptoms or self-prescription.
+    </div>
+
+    <!-- 1. SYMPTOM VOCABULARY SEARCH SECTION -->
+    <div class="symptom-search-section" style="background: #f8fafc; border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 1.25rem; margin-bottom: 1.5rem;">
+        <label for="symptom-search-input" class="form-label" style="font-weight: 700; color: var(--primary-color); display: flex; justify-content: space-between; align-items: center;">
+            <span>🔍 Search Symptom Vocabulary</span>
+            <span style="font-size: 0.8rem; font-weight: normal; color: var(--text-muted);">Matches synonyms & alternative terms</span>
+        </label>
+        
+        <div style="position: relative; display: flex; gap: 0.5rem;">
+            <input 
+                type="text" 
+                id="symptom-search-input" 
+                class="form-control" 
+                placeholder="Type to search symptoms or terms (e.g., 'head', 'fever', 'cough', 'high temperature')..." 
+                value="{{ search_query or '' }}"
+                autocomplete="off"
+            >
+            <button type="button" id="search-clear-btn" class="btn btn-clear" style="display: none; padding: 0.5rem 0.85rem;" title="Clear Search">✕</button>
+        </div>
+
+        <!-- SEARCH STATUS & MATCHES CONTAINER -->
+        <div id="search-status-bar" style="display: none; margin-top: 0.75rem; font-size: 0.85rem; color: var(--text-muted); justify-content: space-between; align-items: center;">
+            <span id="search-results-count">0 matching symptoms found</span>
+            <span style="font-size: 0.75rem;">Click any symptom chip to select/deselect</span>
+        </div>
+
+        <div id="symptom-search-results" class="search-results-grid" style="margin-top: 0.75rem; max-height: 240px; overflow-y: auto;">
+            {% if search_results %}
+                {% for item in search_results %}
+                    <div class="search-match-chip" data-symptom="{{ item.symptom_name }}" data-id="{{ item.symptom_id }}">
+                        <span class="match-name">+ {{ item.symptom_name }}</span>
+                        <span class="category-badge">{{ item.category }}</span>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+
+    <!-- 2. SELECTED SYMPTOMS TRAY (MULTI-SELECT) -->
+    <div class="selected-symptoms-section" style="background: #ffffff; border: 1px dashed var(--primary-color); border-radius: var(--radius-md); padding: 1rem 1.25rem; margin-bottom: 1.5rem;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+            <label class="form-label" style="font-weight: 700; margin: 0; display: flex; align-items: center; gap: 0.5rem;">
+                <span>📋 Selected Symptoms</span>
+                <span id="selected-count-badge" class="badge-score" style="display: none;">0</span>
+            </label>
+            <button type="button" id="clear-selected-btn" class="btn btn-clear" style="font-size: 0.75rem; padding: 0.2rem 0.6rem; display: none;">Clear Selected</button>
+        </div>
+
+        <div id="selected-symptoms-tray" class="tag-container" style="min-height: 38px; align-items: center;">
+            <span id="no-symptoms-hint" style="font-size: 0.85rem; color: var(--text-muted); font-style: italic;">
+                No symptoms selected yet. Search above or click quick tags below to add symptoms.
+            </span>
+        </div>
+    </div>
+
+    <!-- 3. MAIN FORM FOR ANALYSIS -->
+    <form action="{{ url_for('analyze') }}" method="POST" id="analyzer-form">
+        <div class="form-group">
+            <label for="symptoms-input" class="form-label">
+                Natural Language Description / Selected Symptoms:
+            </label>
+            <textarea 
+                id="symptoms-input" 
+                name="symptoms" 
+                rows="4" 
+                class="form-control" 
+                placeholder="Selected symptoms will appear here automatically, or you can type naturally (e.g. 'I have headache, fever and cough')."
+                required
+            ></textarea>
+        </div>
+
+        <!-- QUICK POPULAR SYMPTOM TAGS -->
+        <div style="margin-bottom: 1.5rem;">
+            <span style="font-size: 0.85rem; font-weight: 600; color: var(--text-dark);">Quick add popular symptoms:</span>
+            <div class="tag-container" id="quick-symptoms-container">
+                {% for example in example_symptoms %}
+                    <span class="tag symptom-tag" data-symptom="{{ example }}">+ {{ example }}</span>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div style="display: flex; gap: 1rem;">
+            <button type="submit" class="btn btn-primary" style="flex: 2; font-size: 1.05rem; padding: 0.85rem;">
+                🚀 Analyze Symptoms
+            </button>
+            <button type="button" id="clear-btn" class="btn btn-clear" style="flex: 1;">
+                Reset All
+            </button>
+        </div>
+    </form>
+</div>
+{% endblock %}

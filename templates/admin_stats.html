@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %}System Telemetry & Database View - Drug Recommendation System{% endblock %}
+
+{% block content %}
+<div class="card" style="max-width: 800px; margin: 1rem auto;">
+    <h2 class="card-title">Database & System Telemetry</h2>
+    <p style="color: var(--text-muted); margin-bottom: 1.5rem;">
+        Dynamic counts retrieved from normalized SQLite tables in <code>database.db</code>.
+    </p>
+
+    <div class="stats-grid">
+        <div class="stat-card">
+            <div class="stat-number">{{ stats.symptoms }}</div>
+            <div class="stat-label">Total Symptoms</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">{{ stats.conditions }}</div>
+            <div class="stat-label">Total Conditions</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">{{ stats.medicines }}</div>
+            <div class="stat-label">Total Medicines</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">{{ stats.feedback }}</div>
+            <div class="stat-label">Feedback Entries</div>
+        </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 1.5rem;">
+        <a href="{{ url_for('home') }}" class="btn btn-secondary">Return to Home</a>
+    </div>
+</div>
+{% endblock %}

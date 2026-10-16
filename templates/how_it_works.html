@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+
+{% block title %}How It Works - Drug Recommendation System{% endblock %}
+
+{% block content %}
+<div class="card" style="max-width: 900px; margin: 1rem auto;">
+    <h2 class="card-title" style="text-align: center;">How It Works: System Architecture & Pipeline</h2>
+    <p style="text-align: center; color: var(--text-muted); margin-bottom: 2.5rem;">
+        An 8-stage pipeline converting natural language symptom input into transparent educational medicine information.
+    </p>
+
+    <div style="display: flex; flex-direction: column; gap: 1.5rem; position: relative;">
+        
+        <!-- STEP 1 -->
+        <div style="border: 1px solid var(--border-color); border-left: 5px solid var(--primary-color); border-radius: var(--radius-md); padding: 1.25rem; background: #ffffff;">
+            <span style="font-size: 0.8rem; font-weight: 800; color: var(--primary-color);">STAGE 1</span>
+            <h3 style="color: var(--text-dark); margin-top: 0.25rem;">Natural Language Symptom Input</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem;">The user enters symptoms in plain free-form English (e.g., <em>"I have fever, headache and body pain"</em>).</p>
+        </div>
+
+        <!-- STEP 2 -->
+        <div style="border: 1px solid var(--border-color); border-left: 5px solid var(--secondary-color); border-radius: var(--radius-md); padding: 1.25rem; background: #ffffff;">
+            <span style="font-size: 0.8rem; font-weight: 800; color: var(--secondary-color);">STAGE 2</span>
+            <h3 style="color: var(--text-dark); margin-top: 0.25rem;">NLP Text Preprocessing</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem;">Applies lowercasing, punctuation stripping, tokenization, and removes non-informative English stopwords.</p>
+        </div>
+
+        <!-- STEP 3 -->
+        <div style="border: 1px solid var(--border-color); border-left: 5px solid var(--primary-color); border-radius: var(--radius-md); padding: 1.25rem; background: #ffffff;">
+            <span style="font-size: 0.8rem; font-weight: 800; color: var(--primary-color);">STAGE 3</span>
+            <h3 style="color: var(--text-dark); margin-top: 0.25rem;">Symptom Normalization & Synonym Mapping</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem;">Maps informal terms to canonical database symptoms (e.g., <em>"head ache" → "headache"</em>, <em>"high temp" → "fever"</em>).</p>
+        </div>
+
+        <!-- STEP 4 -->
+        <div style="border: 1px solid var(--border-color); border-left: 5px solid var(--secondary-color); border-radius: var(--radius-md); padding: 1.25rem; background: #ffffff;">
+            <span style="font-size: 0.8rem; font-weight: 800; color: var(--secondary-color);">STAGE 4</span>
+            <h3 style="color: var(--text-dark); margin-top: 0.25rem;">TF-IDF & Naive Bayes Symptom Matching</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem;">Matches extracted feature tokens against dataset health conditions to calculate transparent similarity scores (e.g., <code>Match Score: 0.85</code>).</p>
+        </div>
+
+        <!-- STEP 5 -->
+        <div style="border: 1px solid var(--border-color); border-left: 5px solid var(--primary-color); border-radius: var(--radius-md); padding: 1.25rem; background: #ffffff;">
+            <span style="font-size: 0.8rem; font-weight: 800; color: var(--primary-color);">STAGE 5</span>
+            <h3 style="color: var(--text-dark); margin-top: 0.25rem;">SQLite Relational Database Lookup</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem;">Queries normalized tables (<code>symptoms</code>, <code>conditions</code>, <code>condition_symptoms</code>, <code>medicines</code>) via parameterized SQL queries.</p>
+        </div>
+
+        <!-- STEP 6 -->
+        <div style="border: 1px solid var(--border-color); border-left: 5px solid var(--secondary-color); border-radius: var(--radius-md); padding: 1.25rem; background: #ffffff;">
+            <span style="font-size: 0.8rem; font-weight: 800; color: var(--secondary-color);">STAGE 6</span>
+            <h3 style="color: var(--text-dark); margin-top: 0.25rem;">Educational Medicine Information Retrieval</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem;">Fetches associated OTC medicine profiles including generic name, category, common use, precautions, and side effects.</p>
+        </div>
+
+        <!-- STEP 7 -->
+        <div style="border: 1px solid var(--border-color); border-left: 5px solid var(--primary-color); border-radius: var(--radius-md); padding: 1.25rem; background: #ffffff;">
+            <span style="font-size: 0.8rem; font-weight: 800; color: var(--primary-color);">STAGE 7</span>
+            <h3 style="color: var(--text-dark); margin-top: 0.25rem;">Safety & Emergency Rule Evaluation</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem;">Screens input for red-flag emergency keywords (e.g., chest pain, breathlessness). If detected, triggers immediate emergency care warnings and withholds medicine suggestions.</p>
+        </div>
+
+        <!-- STEP 8 -->
+        <div style="border: 1px solid var(--border-color); border-left: 5px solid var(--secondary-color); border-radius: var(--radius-md); padding: 1.25rem; background: #ffffff;">
+            <span style="font-size: 0.8rem; font-weight: 800; color: var(--secondary-color);">STAGE 8</span>
+            <h3 style="color: var(--text-dark); margin-top: 0.25rem;">Professional Consultation Guidance</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem;">Presents structured educational report accompanied by mandatory disclaimers advising direct clinical consultation with a healthcare professional.</p>
+        </div>
+
+    </div>
+
+    <div style="text-align: center; margin-top: 2.5rem;">
+        <a href="{{ url_for('analyzer') }}" class="btn btn-primary">Try Symptom Analyzer Now</a>
+    </div>
+</div>
+{% endblock %}

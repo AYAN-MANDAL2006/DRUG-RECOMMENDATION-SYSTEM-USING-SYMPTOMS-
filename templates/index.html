@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block title %}Drug Recommendation System - Educational Medicine Information{% endblock %}
+
+{% block content %}
+<!-- HERO SECTION -->
+<section class="hero">
+    <h1 class="hero-title">Drug Recommendation System</h1>
+    <p class="hero-subtitle">Educational Medicine Information Based on Symptoms</p>
+    <p class="hero-description">
+        Describe your symptoms in plain natural language to explore relevant educational medicine information, 
+        precautions, and guidance for professional medical consultation.
+    </p>
+    
+    <div class="disclaimer-banner" style="max-width: 750px; margin: 0 auto 1.5rem auto;">
+        ⚠️ <strong>Important Notice:</strong> This tool provides educational information only and does not diagnose diseases or prescribe medication.
+    </div>
+
+    <div class="hero-actions">
+        <a href="{{ url_for('analyzer') }}" class="btn btn-primary">Analyze Symptoms</a>
+        <a href="{{ url_for('how_it_works') }}" class="btn btn-secondary">Learn How It Works</a>
+    </div>
+</section>
+
+<!-- DYNAMIC DASHBOARD STATS -->
+<section class="stats-grid">
+    <div class="stat-card">
+        <div class="stat-number">{{ stats.symptoms }}+</div>
+        <div class="stat-label">Recognized Symptoms</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-number">{{ stats.conditions }}+</div>
+        <div class="stat-label">Health Conditions</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-number">{{ stats.medicines }}+</div>
+        <div class="stat-label">Educational Medicines</div>
+    </div>
+</section>
+
+<!-- CORE HIGHLIGHTS -->
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+    <div class="card">
+        <h3 class="card-title">🔍 Natural Language NLP</h3>
+        <p>Describe your health symptoms naturally (e.g., <em>"I have headache and fever"</em>). Our Basic NLP engine tokenizes, cleans, and normalizes your text automatically.</p>
+    </div>
+    <div class="card">
+        <h3 class="card-title">📊 Transparent Matching</h3>
+        <p>Utilizes explainable TF-IDF similarity and keyword matching to identify relevant dataset conditions without misleading diagnostic probabilities.</p>
+    </div>
+    <div class="card">
+        <h3 class="card-title">🛡️ Safety-First Approach</h3>
+        <p>High-risk emergency symptoms trigger immediate emergency care notifications. Always consult a qualified physician before taking any medication.</p>
+    </div>
+</div>
+{% endblock %}

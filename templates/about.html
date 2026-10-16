@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block title %}About - Drug Recommendation System{% endblock %}
+
+{% block content %}
+<div class="card" style="max-width: 850px; margin: 1rem auto;">
+    <h2 class="card-title">About The Project</h2>
+    
+    <div style="margin-bottom: 1.5rem;">
+        <h3 style="color: var(--secondary-hover); font-size: 1.15rem;">Project Title:</h3>
+        <p style="font-size: 1.1rem; font-weight: 600;">DRUG RECOMMENDATION SYSTEM BASED ON SYMPTOMS</p>
+    </div>
+
+    <div style="margin-bottom: 1.5rem;">
+        <h3 style="color: var(--secondary-hover); font-size: 1.15rem;">Academic Context:</h3>
+        <p>
+            Developed as a B.Tech CSE (AI/ML) academic project to demonstrate the practical application of 
+            Natural Language Processing (NLP), Machine Learning (Scikit-learn), Relational Database Management (SQLite), 
+            and Web Development (Python Flask).
+        </p>
+    </div>
+
+    <div style="margin-bottom: 1.5rem;">
+        <h3 style="color: var(--secondary-hover); font-size: 1.15rem;">Technology Stack:</h3>
+        <ul style="padding-left: 1.25rem; margin-top: 0.5rem;">
+            <li><strong>Backend Framework:</strong> Python 3, Flask</li>
+            <li><strong>Data Processing:</strong> Pandas, NumPy</li>
+            <li><strong>Natural Language Processing (NLP):</strong> Basic NLP (Tokenization, Lowercasing, Stopword Removal, Synonym Mapping, Term Extraction)</li>
+            <li><strong>Machine Learning:</strong> Scikit-learn (TF-IDF Vectorizer + Multinomial Naive Bayes / Cosine Similarity)</li>
+            <li><strong>Database:</strong> SQLite (Normalized relational database schema)</li>
+            <li><strong>Frontend:</strong> HTML5, Vanilla CSS3 (Healthcare design system), Jinja2 Templates, JavaScript</li>
+        </ul>
+    </div>
+
+    <div style="margin-bottom: 1.5rem;">
+        <h3 style="color: var(--secondary-hover); font-size: 1.15rem;">Project Purpose:</h3>
+        <p>
+            The purpose of this project is to provide users with reliable <strong>EDUCATIONAL information</strong> 
+            about commonly used OTC medicines for basic symptoms. It allows users to express their symptoms in natural language 
+            and retrieve transparent match scores, educational precautions, and safety warnings.
+        </p>
+    </div>
+
+    <div class="disclaimer-banner">
+        🛡️ <strong>Academic Non-Diagnostic Notice:</strong> This software is strictly for academic research and educational evaluation. It is NOT a clinical diagnosis tool or automated prescription engine.
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ medicine.medicine_name }} - Medicine Details{% endblock %}
+
+{% block content %}
+<div style="max-width: 800px; margin: 0 auto;">
+    <div style="margin-bottom: 1rem;">
+        <a href="{{ url_for('medicines') }}" class="btn btn-clear" style="font-size: 0.85rem;">← Back to Medicine Directory</a>
+    </div>
+
+    <div class="card">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; border-bottom: 2px solid #e0f2fe; padding-bottom: 1rem;">
+            <div>
+                <h1 style="color: var(--primary-color); font-size: 1.8rem;">{{ medicine.medicine_name }}</h1>
+                <p style="color: var(--text-muted); font-size: 1rem;">Generic Name: <strong>{{ medicine.generic_name or 'N/A' }}</strong></p>
+            </div>
+            <span style="background: #e0f2fe; color: #0369a1; padding: 0.35rem 0.85rem; border-radius: 20px; font-weight: 600;">
+                Category: {{ medicine.category or 'General' }}
+            </span>
+        </div>
+
+        <div style="margin-top: 1.5rem; display: flex; flex-direction: column; gap: 1.25rem;">
+            <div>
+                <h4 style="color: var(--secondary-hover); margin-bottom: 0.25rem;">Common Use / Purpose</h4>
+                <p>{{ medicine.common_use or 'Information not available in dataset.' }}</p>
+            </div>
+
+            <div>
+                <h4 style="color: var(--secondary-hover); margin-bottom: 0.25rem;">Precautions</h4>
+                <p>{{ medicine.precautions or 'Consult a qualified healthcare professional.' }}</p>
+            </div>
+
+            <div>
+                <h4 style="color: var(--secondary-hover); margin-bottom: 0.25rem;">Possible Side Effects</h4>
+                <p>{{ medicine.side_effects or 'N/A' }}</p>
+            </div>
+
+            {% if medicine.contraindications %}
+                <div>
+                    <h4 style="color: var(--secondary-hover); margin-bottom: 0.25rem;">Contraindications</h4>
+                    <p>{{ medicine.contraindications }}</p>
+                </div>
+            {% endif %}
+
+            {% if medicine.warning %}
+                <div style="background: #fffbeeb; border-left: 4px solid var(--warning-color); padding: 1rem; border-radius: 4px;">
+                    <h4 style="color: var(--warning-color); margin-bottom: 0.25rem;">⚠️ Safety Warning</h4>
+                    <p style="font-size: 0.95rem;">{{ medicine.warning }}</p>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+
+    <!-- MANDATORY SAFETY DISCLAIMER -->
+    <div class="disclaimer-banner">
+        🛡️ <strong>Educational Notice:</strong> This profile is intended solely for educational reference. Do NOT initiate, stop, or alter medication without consulting a qualified healthcare professional.
+    </div>
+</div>
+{% endblock %}

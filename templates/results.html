@@ -1,0 +1,131 @@
+{% extends 'base.html' %}
+
+{% block title %}Symptom Analysis Results - Drug Recommendation System{% endblock %}
+
+{% block content %}
+<div style="max-width: 900px; margin: 0 auto;">
+
+    <!-- EMERGENCY SAFETY WARNING BANNER IF DETECTED -->
+    {% if result.is_emergency %}
+        <div class="emergency-banner">
+            <h3>🚨 URGENT HEALTH NOTICE</h3>
+            <p style="margin-top: 0.5rem;">{{ result.emergency_warning }}</p>
+            <div style="margin-top: 1rem;">
+                <a href="{{ url_for('analyzer') }}" class="btn btn-secondary">Return to Analyzer</a>
+            </div>
+        </div>
+    {% else %}
+
+        <!-- USER INPUT & RECOGNIZED SYMPTOMS -->
+        <div class="card">
+            <h2 class="card-title">Symptom Analysis Report</h2>
+            <p><strong>Your Input:</strong> <em>"{{ result.raw_input }}"</em></p>
+            
+            <div style="margin-top: 1rem;">
+                <strong>Recognized Symptoms:</strong>
+                {% if result.recognized_symptoms %}
+                    <ul style="margin-top: 0.5rem; padding-left: 1.25rem;">
+                        {% for sym in result.recognized_symptoms %}
+                            <li style="color: var(--primary-color); font-weight: 600;">✓ {{ sym|title }}</li>
+                        {% endfor %}
+                    </ul>
+                {% else %}
+                    <p style="color: var(--text-muted); margin-top: 0.5rem;">
+                        No symptoms matching our database dictionary were recognized in your input.
+                    </p>
+                {% endif %}
+            </div>
+        </div>
+
+        {% if result.message %}
+            <div class="card" style="text-align: center; color: var(--text-muted);">
+                <p>{{ result.message }}</p>
+                <div style="margin-top: 1rem;">
+                    <a href="{{ url_for('analyzer') }}" class="btn btn-primary">Try Describing Symptoms Differently</a>
+                </div>
+            </div>
+        {% endif %}
+
+        <!-- RELEVANT MATCHED CONDITIONS -->
+        {% if result.matched_conditions %}
+            <div class="card">
+                <h3 class="card-title">Associated Educational Conditions</h3>
+                <div style="display: flex; flex-direction: column; gap: 1rem;">
+                    {% for cond in result.matched_conditions %}
+                        <div style="padding: 1rem; border: 1px solid var(--border-color); border-radius: var(--radius-md); background: #f8fafc;">
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <h4 style="color: var(--primary-color); font-size: 1.1rem;">{{ cond.condition_name }}</h4>
+                                <span class="badge-score">Match Score: {{ cond.match_score }}</span>
+                            </div>
+                            <p style="margin-top: 0.5rem; font-size: 0.95rem; color: var(--text-dark);">{{ cond.description }}</p>
+                            <p style="margin-top: 0.35rem; font-size: 0.85rem; color: var(--text-muted);">
+                                Matched overlap: {{ cond.matched_symptoms_list | join(', ') }}
+                            </p>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        {% endif %}
+
+        <!-- EDUCATIONAL MEDICINE INFORMATION -->
+        {% if result.medicines %}
+            <div class="card">
+                <h3 class="card-title">Relevant Educational Medicine Information</h3>
+                <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.5rem;">
+                    The following OTC/generic medicine information is associated with matched conditions for educational reference only.
+                </p>
+
+                <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                    {% for med in result.medicines %}
+                        <div style="border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 1.25rem; background: #ffffff;">
+                            <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap;">
+                                <div>
+                                    <h4 style="font-size: 1.2rem; color: var(--secondary-hover);">{{ med.medicine_name }}</h4>
+                                    <span style="font-size: 0.85rem; background: #e0f2fe; color: #0369a1; padding: 0.15rem 0.5rem; border-radius: 4px;">
+                                        Category: {{ med.category or 'General OTC' }}
+                                    </span>
+                                </div>
+                                <span style="font-size: 0.85rem; color: var(--text-muted);">
+                                    Associated with: {{ med.associated_condition }}
+                                </span>
+                            </div>
+
+                            <div style="margin-top: 1rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                                <div>
+                                    <p><strong>Generic Name:</strong> {{ med.generic_name or 'N/A' }}</p>
+                                    <p><strong>Common Use:</strong> {{ med.common_use or 'Information not available in dataset.' }}</p>
+                                </div>
+                                <div>
+                                    <p><strong>Precautions:</strong> {{ med.precautions or 'Consult physician.' }}</p>
+                                    <p><strong>Possible Side Effects:</strong> {{ med.side_effects or 'N/A' }}</p>
+                                </div>
+                            </div>
+
+                            {% if med.warning %}
+                                <div style="margin-top: 0.75rem; font-size: 0.85rem; color: var(--warning-color); background: #fffbeeb; padding: 0.5rem; border-radius: 4px;">
+                                    ⚠️ <strong>Warning:</strong> {{ med.warning }}
+                                </div>
+                            {% endif %}
+
+                            <div style="margin-top: 1rem; text-align: right;">
+                                <a href="{{ url_for('medicine_detail', med_id=med.id) }}" class="btn btn-secondary" style="font-size: 0.85rem; padding: 0.4rem 0.8rem;">View Full Details</a>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        {% endif %}
+
+        <!-- MANDATORY SAFETY NOTICE -->
+        <div class="disclaimer-banner" style="margin-top: 2rem;">
+            🛡️ <strong>IMPORTANT SAFETY NOTICE:</strong> {{ result.disclaimer }}
+        </div>
+
+        <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 1.5rem;">
+            <a href="{{ url_for('analyzer') }}" class="btn btn-primary">Analyze Another Symptom</a>
+            <a href="{{ url_for('medicines') }}" class="btn btn-secondary">Browse Medicine Directory</a>
+        </div>
+
+    {% endif %}
+</div>
+{% endblock %}

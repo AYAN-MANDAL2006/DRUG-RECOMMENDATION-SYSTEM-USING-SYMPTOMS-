@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Drug Recommendation System Based on Symptoms{% endblock %}</title>
+    <meta name="description" content="Educational medicine information system based on natural language symptom matching.">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="{{ url_for('home') }}" class="brand-logo">
+                <span class="brand-icon">💊</span>
+                <span>MediRecommend <small style="font-size: 0.7rem; color: var(--text-muted); font-weight: normal;">(Educational)</small></span>
+            </a>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="{{ url_for('home') }}" class="nav-link">Home</a></li>
+                    <li><a href="{{ url_for('analyzer') }}" class="nav-link">Symptom Analyzer</a></li>
+                    <li><a href="{{ url_for('medicines') }}" class="nav-link">Medicines</a></li>
+                    <li><a href="{{ url_for('how_it_works') }}" class="nav-link">How It Works</a></li>
+                    <li><a href="{{ url_for('about') }}" class="nav-link">About</a></li>
+                    <li><a href="{{ url_for('disclaimer') }}" class="nav-link">Disclaimer</a></li>
+                    <li><a href="{{ url_for('feedback') }}" class="nav-link">Feedback</a></li>
+                    <li><a href="{{ url_for('analyzer') }}" class="nav-cta">Analyze Symptoms</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- FLASH MESSAGES -->
+    <div class="main-container">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="disclaimer-banner" style="border-color: var(--primary-color);">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        <!-- MAIN CONTENT BLOCK -->
+        {% block content %}{% endblock %}
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p><strong>Drug Recommendation System Based on Symptoms</strong> — B.Tech CSE (AI/ML) Academic Project</p>
+            <p style="margin-top: 0.5rem; font-size: 0.85rem; color: var(--text-muted);">
+                {{ global_disclaimer }}
+            </p>
+            <p style="margin-top: 0.75rem;">
+                <a href="{{ url_for('disclaimer') }}">Full Safety Disclaimer</a> | 
+                <a href="{{ url_for('admin_stats') }}">System Statistics</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+{% block title %}Medicine Information Directory - Drug Recommendation System{% endblock %}
+
+{% block content %}
+<div style="max-width: 1000px; margin: 0 auto;">
+    <h2 class="hero-subtitle" style="text-align: center; margin-bottom: 0.5rem;">Medicine Information Directory</h2>
+    <p style="text-align: center; color: var(--text-muted); margin-bottom: 2rem;">
+        Search educational information for OTC and common generic medicines in our database.
+    </p>
+
+    <!-- SEARCH BAR -->
+    <div class="card" style="padding: 1.25rem;">
+        <form action="{{ url_for('medicines') }}" method="GET" style="display: flex; gap: 1rem;">
+            <input 
+                type="text" 
+                name="q" 
+                class="form-control" 
+                placeholder="Search medicine name, generic name, category, or symptom (e.g., Paracetamol, Ibuprofen, pain)" 
+                value="{{ query }}"
+            >
+            <button type="submit" class="btn btn-primary">Search</button>
+            {% if query %}
+                <a href="{{ url_for('medicines') }}" class="btn btn-clear">Clear</a>
+            {% endif %}
+        </form>
+    </div>
+
+    <!-- DISCLAIMER -->
+    <div class="disclaimer-banner">
+        ⚠️ <strong>Educational Information Only:</strong> The medicine details listed below are for academic reference. Always consult a licensed pharmacist or healthcare professional.
+    </div>
+
+    <!-- MEDICINES GRID / CARDS -->
+    {% if medicines %}
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem;">
+            {% for med in medicines %}
+                <div class="card" style="display: flex; flex-direction: column; justify-content: space-between;">
+                    <div>
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                            <h3 style="color: var(--primary-color); font-size: 1.15rem;">{{ med.medicine_name }}</h3>
+                            <span style="font-size: 0.75rem; background: #e0f2fe; color: #0369a1; padding: 0.2rem 0.5rem; border-radius: 4px;">
+                                {{ med.category or 'General' }}
+                            </span>
+                        </div>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.35rem;">
+                            <strong>Generic:</strong> {{ med.generic_name or 'N/A' }}
+                        </p>
+                        <p style="font-size: 0.9rem; margin-top: 0.75rem; color: var(--text-dark);">
+                            {{ med.common_use | truncate(120) if med.common_use else 'Information not available in current dataset.' }}
+                        </p>
+                    </div>
+                    <div style="margin-top: 1.25rem; border-top: 1px solid var(--border-color); padding-top: 0.75rem;">
+                        <a href="{{ url_for('medicine_detail', med_id=med.id) }}" class="btn btn-secondary" style="width: 100%; font-size: 0.85rem;">View Full Profile</a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <div class="card" style="text-align: center; padding: 3rem;">
+            <p style="color: var(--text-muted); font-size: 1.1rem;">No matching medicines found for "{{ query }}".</p>
+            <p style="font-size: 0.9rem; margin-top: 0.5rem;">Try searching for generic terms like "Paracetamol", "Ibuprofen", or "Antacid".</p>
+        </div>
+    {% endif %}
+</div>
+{% endblock %}

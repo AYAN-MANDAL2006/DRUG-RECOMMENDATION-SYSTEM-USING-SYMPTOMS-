@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block title %}Safety & Medical Disclaimer - Drug Recommendation System{% endblock %}
+
+{% block content %}
+<div class="card" style="max-width: 850px; margin: 1rem auto;">
+    <h2 class="card-title" style="color: var(--danger-color);">Safety & Medical Disclaimer</h2>
+    
+    <div class="disclaimer-banner" style="margin-bottom: 2rem;">
+        🛡️ <strong>CRITICAL NOTICE:</strong> This application is developed strictly for educational and academic demonstration purposes. It does NOT provide medical advice, diagnosis, or treatment.
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+        <div>
+            <h3 style="color: var(--text-dark); font-size: 1.15rem;">1. Not a Substitute for Professional Medical Advice</h3>
+            <p>
+                The information provided by the Drug Recommendation System is for general educational awareness only. 
+                It is not intended as a substitute for professional medical advice, diagnosis, or treatment by a qualified physician or pharmacist.
+            </p>
+        </div>
+
+        <div>
+            <h3 style="color: var(--text-dark); font-size: 1.15rem;">2. No Autonomous Diagnosis or Prescription</h3>
+            <p>
+                This tool does NOT state <em>"You have disease X"</em> or <em>"You must take medicine Y"</em>. 
+                It does not calculate personalized dosage, duration of therapy, or prescribe controlled substances.
+            </p>
+        </div>
+
+        <div>
+            <h3 style="color: var(--text-dark); font-size: 1.15rem;">3. Emergency Medical Disclaimer</h3>
+            <p>
+                If you are experiencing severe or life-threatening symptoms—such as severe chest pain, sudden difficulty breathing, 
+                loss of consciousness, uncontrollable bleeding, seizures, or signs of stroke—<strong>DO NOT use this website</strong>. 
+                Call emergency emergency services or visit the nearest hospital emergency room immediately.
+            </p>
+        </div>
+
+        <div>
+            <h3 style="color: var(--text-dark); font-size: 1.15rem;">4. Limitation of Liability</h3>
+            <p>
+                The developers and academic institution associated with this project assume no liability for actions taken, 
+                medications consumed, or medical decisions made based on the output of this software.
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %}
